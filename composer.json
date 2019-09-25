@@ -21,7 +21,7 @@
             "Lotos\\Http\\Stream\\": "src/Stream/",
             "Lotos\\Http\\Stream\\Exception\\": "src/Stream/Exception/",
             "Lotos\\Http\\Uri\\": "src/Uri/",
-            "Lotos\\Http\\Uri\\Exception\\": "src/Uri/Exception/",
+            "Lotos\\Http\\Uri\\Exception\\": "src/Uri/Exception/"
         }
     },
     "minimum-stability": "stable",
