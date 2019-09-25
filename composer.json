@@ -1,0 +1,33 @@
+{
+    "name": "lotos/http",
+    "type": "library",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "McLotos",
+            "email": "mclotos@xakep.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lotos\\Http\\": "src/",
+            "Lotos\\Http\\File\\": "src/File/",
+            "Lotos\\Http\\Message\\": "src/Message/",
+            "Lotos\\Http\\Message\\Exception\\": "src/Message/Exception/",
+            "Lotos\\Http\\Request\\": "src/Request/",
+            "Lotos\\Http\\Response\\": "src/Response/",
+            "Lotos\\Http\\ServerRequest\\": "src/ServerRequest/",
+            "Lotos\\Http\\Strategies\\": "src/Strategies/",
+            "Lotos\\Http\\Stream\\": "src/Stream/",
+            "Lotos\\Http\\Stream\\Exception\\": "src/Stream/Exception/",
+            "Lotos\\Http\\Uri\\": "src/Uri/",
+            "Lotos\\Http\\Uri\\Exception\\": "src/Uri/Exception/",
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "psr/http-message": "^5.3.0",
+        "fig/http-message-util": "1.1.3"
+    }
+}

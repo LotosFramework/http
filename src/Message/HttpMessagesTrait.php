@@ -1,0 +1,77 @@
+<?php
+
+namespace Lotos\Http\Message;
+
+trait HttpMessagesTrait {
+
+    private $messages = [
+        self::STATUS_CONTINUE => 'Continue',
+        self::STATUS_SWITCHING_PROTOCOLS => 'Switching Protocols',
+        self::STATUS_PROCESSING => 'Processing',
+        self::STATUS_EARLY_HINTS => 'Early Hints',
+        self::STATUS_OK => 'OK',
+        self::STATUS_CREATED => 'Created',
+        self::STATUS_ACCEPTED => 'Accepted',
+        self::STATUS_NON_AUTHORITATIVE_INFORMATION => 'Non authoritative information',
+        self::STATUS_NO_CONTENT => 'No content',
+        self::STATUS_RESET_CONTENT => 'Reset content',
+        self::STATUS_PARTIAL_CONTENT => 'Partial content',
+        self::STATUS_MULTI_STATUS => 'Multi status',
+        self::STATUS_ALREADY_REPORTED => 'Already reported',
+        self::STATUS_IM_USED => 'I\'m used',
+        self::STATUS_MULTIPLE_CHOICES => 'Multiple choices',
+        self::STATUS_MOVED_PERMANENTLY => 'Moved permanently',
+        self::STATUS_FOUND => 'Found',
+        self::STATUS_SEE_OTHER => 'See other',
+        self::STATUS_NOT_MODIFIED => 'Not modified',
+        self::STATUS_USE_PROXY => 'Use proxy',
+        self::STATUS_RESERVED => 'Reserved',
+        self::STATUS_TEMPORARY_REDIRECT => 'Temporary redirect',
+        self::STATUS_PERMANENT_REDIRECT => 'Permanent redirect',
+        self::STATUS_BAD_REQUEST => 'Bad request',
+        self::STATUS_UNAUTHORIZED => 'Unauthorized',
+        self::STATUS_PAYMENT_REQUIRED => 'Payment required',
+        self::STATUS_FORBIDDEN => 'Forbidden',
+        self::STATUS_NOT_FOUND => 'Not found',
+        self::STATUS_METHOD_NOT_ALLOWED => 'Method not allowed',
+        self::STATUS_NOT_ACCEPTABLE => 'Not acceptable',
+        self::STATUS_PROXY_AUTHENTICATION_REQUIRED => 'Proxy authentication required',
+        self::STATUS_REQUEST_TIMEOUT => 'Request Timeout',
+        self::STATUS_CONFLICT => 'Conflict',
+        self::STATUS_GONE => 'Gone',
+        self::STATUS_LENGTH_REQUIRED => 'Length required',
+        self::STATUS_PRECONDITION_FAILED => 'Precondition failed',
+        self::STATUS_PAYLOAD_TOO_LARGE => 'Payload too large',
+        self::STATUS_URI_TOO_LONG => 'Too long',
+        self::STATUS_UNSUPPORTED_MEDIA_TYPE => 'Unsupported media type',
+        self::STATUS_RANGE_NOT_SATISFIABLE => 'Range not satisfiable',
+        self::STATUS_EXPECTATION_FAILED => 'Expectation failed',
+        self::STATUS_IM_A_TEAPOT => 'I\'m a teapot',
+        self::STATUS_MISDIRECTED_REQUEST => 'Misdirected request',
+        self::STATUS_UNPROCESSABLE_ENTITY => 'Unprocessable entity',
+        self::STATUS_LOCKED => 'Locked',
+        self::STATUS_FAILED_DEPENDENCY => 'Failed dependency',
+        self::STATUS_TOO_EARLY => 'Too early',
+        self::STATUS_UPGRADE_REQUIRED => 'Upgrade required',
+        self::STATUS_PRECONDITION_REQUIRED => 'Precondition required',
+        self::STATUS_TOO_MANY_REQUESTS => 'Too many requests',
+        self::STATUS_REQUEST_HEADER_FIELDS_TOO_LARGE => 'Request header fields too large',
+        self::STATUS_UNAVAILABLE_FOR_LEGAL_REASONS => 'Unavailable for legal reasons',
+        self::STATUS_INTERNAL_SERVER_ERROR => 'Internal server error',
+        self::STATUS_NOT_IMPLEMENTED => 'Not implemented',
+        self::STATUS_BAD_GATEWAY => 'Bad gateway',
+        self::STATUS_SERVICE_UNAVAILABLE => 'Service unavailable',
+        self::STATUS_GATEWAY_TIMEOUT => 'Gateway timeout',
+        self::STATUS_VERSION_NOT_SUPPORTED => 'Version not supported',
+        self::STATUS_VARIANT_ALSO_NEGOTIATES => 'Variant also negotiates',
+        self::STATUS_INSUFFICIENT_STORAGE => 'Insufficient storage',
+        self::STATUS_LOOP_DETECTED => 'Loop detected',
+        self::STATUS_NOT_EXTENDED => 'Not extended',
+        self::STATUS_NETWORK_AUTHENTICATION_REQUIRED => 'Network authentication required',
+    ];
+
+    private function getStatusMessageByCode($code) : string
+    {
+        return $this->messages[$code];
+    }
+}
