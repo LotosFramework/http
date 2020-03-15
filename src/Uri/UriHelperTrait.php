@@ -87,4 +87,14 @@ trait UriHelperTrait
 
         throw new InvalidTypeException;
     }
+
+    public function addVars(array $vars) : void
+    {
+        $this->vars = $vars;
+    }
+
+    public function getVars() : array
+    {
+        return $this->vars;
+    }
 }

@@ -43,6 +43,7 @@ class Uri implements UriInterface
     private $path;
     private $query;
     private $fragment;
+    private $vars;
 
     public function __construct($uri = null)
     {

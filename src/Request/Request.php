@@ -122,4 +122,12 @@ class Request implements RequestInterface, RequestMethodInterface
     {
         return $this->queryParams;
     }
+
+    public function __call($method, $args)
+    {
+        if(substr($method, 0, 3) == 'get') {
+            $var = substr(strtolower($method), 3);
+            return $this->getUri()->getVars()[$var];
+        }
+    }
 }
