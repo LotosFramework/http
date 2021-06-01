@@ -4,7 +4,7 @@ namespace Lotos\Http\Message;
 
 trait HttpMessagesTrait {
 
-    private $messages = [
+    private array $messages = [
         self::STATUS_CONTINUE => 'Continue',
         self::STATUS_SWITCHING_PROTOCOLS => 'Switching Protocols',
         self::STATUS_PROCESSING => 'Processing',
@@ -70,7 +70,7 @@ trait HttpMessagesTrait {
         self::STATUS_NETWORK_AUTHENTICATION_REQUIRED => 'Network authentication required',
     ];
 
-    private function getStatusMessageByCode($code) : string
+    private function getStatusMessageByCode(int $code) : string
     {
         return $this->messages[$code];
     }

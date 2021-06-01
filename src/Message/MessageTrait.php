@@ -10,9 +10,9 @@ trait MessageTrait {
 
     use MessageValidatorTrait;
 
-    private $protocol = '1.1';
-    private $headerNames = [];
-    private $stream;
+    private string $protocol = '1.1';
+    private array $headerNames = [];
+    private ?StreamInterface $stream = null;
 
     public function getProtocolVersion() : string
     {

@@ -21,7 +21,7 @@ trait UriValidatorTrait
         'https' => 443
     ];
 
-    private function ensureNotEmptyProperty(string $property) : void
+    private function ensureNotEmptyProperty(?string $property) : void
     {
         if(empty($property)) {
             throw new EmptyPropertyException('Property is empty');

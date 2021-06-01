@@ -164,7 +164,7 @@ class Uri implements UriInterface
     public function withPort($port = null) : UriInterface
     {
         try {
-            $this->ensureNotEmptyProperty($host);
+            $this->ensureNotEmptyProperty($port);
             $this->ensureValidIntType($port);
             $this->ensureValidInterval($port, 1, 65535);
             $this->ensureEquals($port, $this->port);
