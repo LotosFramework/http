@@ -21,6 +21,10 @@ class JsonStrategy implements StrategyInterface
         $body = json_encode($content, JSON_UNESCAPED_UNICODE);
         $body = str_replace(',',', ', $body);
         $body = str_replace('\/', '/', $body);
+        $body = str_replace('\\\\', '{slash}', $body);
+        $body = str_replace('\\', '', $body);
+        $body = str_replace('{slash}u', '\u', $body);
+        $body = trim($body, '"');
         $hash = md5($body);
         $response = $response->withHeader('Content-MD5', $hash)
                 ->withHeader('Access-Control-Expose-Headers', $this->getAllowedHeaders($response));
